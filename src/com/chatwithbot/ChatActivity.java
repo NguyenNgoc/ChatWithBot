@@ -244,18 +244,459 @@ public class ChatActivity extends RobotActivity implements SpeakToTextListener {
 								try {
 									String gestureStr = "";
 									if (message.content.toLowerCase().contains(
-											"không nói cho tức")) {
+											"không nói cho tức")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không nên nói cộc lốc")
+											|| message.content.toLowerCase()
+													.contains("cấm nói tục")
+											|| message.content.toLowerCase()
+													.contains("chửi bậy")
+											|| message.content
+													.toLowerCase()
+													.contains("chắc chắn không")
+											|| message.content.toLowerCase()
+													.contains("không yêu đâu")
+											|| message.content.toLowerCase()
+													.contains("đừng")
+											|| message.content.toLowerCase()
+													.contains("không thích")
+											|| message.content.toLowerCase()
+													.contains("không ngu")
+											|| message.content.toLowerCase()
+													.contains("tôi không nói")
+											|| message.content.toLowerCase()
+													.contains("không cho")) {
 										gestureStr = "No";
-									}else if (message.content.toLowerCase().contains("nói lại được không")
-											|| message.content.toLowerCase().contains("hơ hơ")
-											|| message.content.toLowerCase().contains("hì hì")
-											|| message.content.toLowerCase().contains("à")
-											|| message.content.toLowerCase().contains("mình chẳng hiểu bạn nói")){
-										gestureStr = "Annoyed";
+									} else if (message.content.toLowerCase()
+											.contains("hơ hơ")
+											|| message.content.toLowerCase()
+													.contains("hì hì")
+											|| message.content.toLowerCase()
+													.contains("hê hê")
+											|| message.content.toLowerCase()
+													.contains("à")) {
+										gestureStr = "Embarrassed";
+									} else if (message.content.toLowerCase()
+											.contains("ha ha")) {
+										gestureStr = "Laugh";
+									} else if (message.content.toLowerCase()
+											.contains("nói lại được không")
+											|| message.content.toLowerCase()
+													.contains("đúng không")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"bạn không thích hả")
+											|| message.content.toLowerCase()
+													.contains("suy nghĩ gì")
+											|| message.content.toLowerCase()
+													.contains("muốn ăn gì")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không hiểu chỗ nào")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không hiểu cái gì")
+											|| message.content.toLowerCase()
+													.contains("được không")) {
+										gestureStr = "WhatSThis";
+									} else if (message.content.toLowerCase()
+											.contains("hình như chưa")
+											|| message.content.toLowerCase()
+													.contains(
+															"hình như là chưa")
+											|| message.content.toLowerCase()
+													.contains("không có gì")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không có ai để nói chuyện")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không nói chuyện với tôi")
+											|| message.content.toLowerCase()
+													.contains("yêu làm chi")) {
+										gestureStr = "Nothing";
+									} else if (message.content.toLowerCase()
+											.contains("nghe quen quen")
+											|| message.content.toLowerCase()
+													.contains(
+															"chờ tôi vài phút")) {
+										gestureStr = "Thinking";
+									} else if (message.content.toLowerCase()
+											.contains("tôi ngu")
+											|| message.content.toLowerCase()
+													.contains("đồ điên")
+											|| message.content.toLowerCase()
+													.contains("cút đi")) {
+										gestureStr = "Angry";
+									} else if (message.content.toLowerCase()
+											.contains("sao lại chán")
+											|| message.content.toLowerCase()
+													.contains("sao lại bó tay")
+											|| message.content
+													.toLowerCase()
+													.contains("sao bạn lại nói")
+											|| message.content.toLowerCase()
+													.contains("cám ơn gì")
+											|| message.content.toLowerCase()
+													.contains("tại sao")
+											|| message.content.toLowerCase()
+													.contains("sao lại thế")
+											|| message.content.toLowerCase()
+													.contains("làm gì")
+											|| message.content.toLowerCase()
+													.contains("thế nào")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"bạn cũng vui tính")
+											|| message.content.toLowerCase()
+													.contains("nếu không chê")
+											|| message.content.toLowerCase()
+													.contains("tôi luôn ở đây")
+											|| message.content.toLowerCase()
+													.contains("trước mặt bạn")
+											|| message.content.toLowerCase()
+													.contains("tôi vẫn ở đây")
+											|| message.content.toLowerCase()
+													.contains(
+															"đối diện tôi đây")) {
+										gestureStr = "Give";
+									} else if (message.content.toLowerCase()
+											.contains("khen thừa")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"nói điều ai cũng biết")
+											|| message.content
+													.toLowerCase()
+													.contains("một thời bá đạo")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"câu nói thừa nhất")
+											|| message.content.toLowerCase()
+													.contains("mình giỏi quá")
+											|| message.content.toLowerCase()
+													.contains(
+															"mình vui tính mà")
+											|| message.content.toLowerCase()
+													.contains("yêu mấy cô rồi")
+											|| message.content.toLowerCase()
+													.contains("tôi có thừa")
+											|| message.content.toLowerCase()
+													.contains("tên tôi đẹp")
+											|| message.content.toLowerCase()
+													.contains("bá đạo")) {
+										gestureStr = "Proud";
+									} else if (message.content.toLowerCase()
+											.contains("chào bạn")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"bạn có khỏe không")
+											|| message.content.toLowerCase()
+													.contains("bạn tên gì")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"rất vui được làm quen với bạn")) {
+										gestureStr = "HandMotionBehavior5";
+									} else if (message.content.toLowerCase()
+											.contains("có chứ")
+											|| message.content.toLowerCase()
+													.contains("thích chứ")
+											|| message.content.toLowerCase()
+													.contains("sẵn sàng")
+											|| message.content.toLowerCase()
+													.contains("chắc chắn")
+											|| message.content.toLowerCase()
+													.contains("tôi làm được")
+											|| message.content.toLowerCase()
+													.contains(
+															"tôi quan tâm bạn")
+											|| message.content.toLowerCase()
+													.contains("tôi có duyên")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"chắc chắn là phải có rồi")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"tôi quên sao được")
+											|| message.content.toLowerCase()
+													.contains("hiển nhiên")
+											|| message.content.toLowerCase()
+													.contains("bạn sẽ ngủ")
+											|| message.content.toLowerCase()
+													.contains(
+															"tôi cũng yêu bạn")
+											|| message.content.toLowerCase()
+													.contains("tôi là nam")) {
+										gestureStr = "Sure";
+									} else if (message.content.toLowerCase()
+											.contains("bình thường")
+											|| message.content.toLowerCase()
+													.contains("tôi thích cười")
+											|| message.content.toLowerCase()
+													.contains("trời đẹp")) {
+										gestureStr = "Optimistic";
+									} else if (message.content.toLowerCase()
+											.contains("nhớ mang theo ô nhé")
+											|| message.content.toLowerCase()
+													.contains("nước chanh nhé")) {
+										gestureStr = "Take";
+									} else if (message.content.toLowerCase()
+											.contains("trời nóng thật")) {
+										gestureStr = "Relieved";
+									} else if (message.content.toLowerCase()
+											.contains("kệ")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"cám ơn bạn đã quá khen")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không có gì thật mà")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"buồn cười thì cười")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"tôi từng nói câu này")
+											|| message.content.toLowerCase()
+													.contains("mình nói rồi à")) {
+										gestureStr = "Innocent";
+									} else if (message.content.toLowerCase()
+											.contains("thịt chim cánh cụt")
+											|| message.content.toLowerCase()
+													.contains("thịt cá voi")
+											|| message.content.toLowerCase()
+													.contains("bánh đa")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"vừa ăn vừa uống rượu")
+											|| message.content.toLowerCase()
+													.contains("thích lắm")) {
+										gestureStr = "Excited";
+									} else if (message.content
+											.toLowerCase()
+											.contains(
+													"có duyên ắt phải gặp nhau")
+											|| message.content.toLowerCase()
+													.contains("tôi khỏe")
+											|| message.content.toLowerCase()
+													.contains("khỏe đừng hỏi")
+											|| message.content.toLowerCase()
+													.contains("mình khỏe")
+											|| message.content
+													.toLowerCase()
+													.contains("tôi rất là khỏe")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"chuyện gì cũng được")
+											|| message.content.toLowerCase()
+													.contains("vớ vẩn")
+											|| message.content.toLowerCase()
+													.contains("sao mà ốm được")
+											|| message.content.toLowerCase()
+													.contains("là đúng rồi")
+											|| message.content.toLowerCase()
+													.contains("tin tôi đi")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"nhiệt tình ấy chứ")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"tại sao lại không")
+											|| message.content.toLowerCase()
+													.contains("tại sao không")
+											|| message.content.toLowerCase()
+													.contains("tất nhiên")
+											|| message.content.toLowerCase()
+													.contains("yên tâm")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không biết nói dối")) {
+										gestureStr = "Determined      ";
+									} else if (message.content.toLowerCase()
+											.contains("tôi không khỏe")
+											|| message.content.toLowerCase()
+													.contains("tôi không muốn")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không hiểu vì sao")
+											|| message.content.toLowerCase()
+													.contains("chán lắm")) {
+										gestureStr = "Amused";
+									} else if (message.content.toLowerCase()
+											.contains("cố lên")
+											|| message.content.toLowerCase()
+													.contains("với tôi đi")
+											|| message.content
+													.toLowerCase()
+													.contains("hãy kể tôi nghe")
+											|| message.content.toLowerCase()
+													.contains("yêu đi")
+											|| message.content.toLowerCase()
+													.contains("cưới nhau đi")
+											|| message.content.toLowerCase()
+													.contains("ngủ đi")
+											|| message.content.toLowerCase()
+													.contains("ngủ thôi")
+											|| message.content.toLowerCase()
+													.contains("uống đi")
+											|| message.content.toLowerCase()
+													.contains("uống nước đi")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"uống cốc nước mát đi")
+											|| message.content.toLowerCase()
+													.contains("cứ tự nhiên")) {
+										gestureStr = "ComeOn";
+									} else if (message.content.toLowerCase()
+											.contains("mua thuốc uống đi")
+											|| message.content
+													.toLowerCase()
+													.contains("hãy đi ra ngoài")
+											|| message.content.toLowerCase()
+													.contains("lên giường")
+											|| message.content.toLowerCase()
+													.contains("lăn vào bếp")
+											|| message.content.toLowerCase()
+													.contains("ra quán trà đá")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"nói chuyện khác đi")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"kiếm chôc nào mát")
+											|| message.content.toLowerCase()
+													.contains("đi bác sĩ")
+											|| message.content.toLowerCase()
+													.contains("nghỉ ngơi đi")) {
+										gestureStr = "Far";
+									} else if (message.content.toLowerCase()
+											.contains("tôi không biết")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"làm sao mà biết được")
+											|| message.content.toLowerCase()
+													.contains("quên rồi")
+											|| message.content.toLowerCase()
+													.contains("không nhớ")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"mình chẳng hiểu bạn nói")) {
+										gestureStr = "IDontKnow";
+									} else if (message.content
+											.toLowerCase()
+											.contains(
+													"tức giận chỉ hại sức khỏe")
+											|| message.content.toLowerCase()
+													.contains("hạ hỏa")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"giải tỏa nỗi bực dọc")) {
+										gestureStr = "CalmDown";
+									} else if (message.content.toLowerCase()
+											.contains("chán bạn quá")
+											|| message.content.toLowerCase()
+													.contains("chán thật")
+											|| message.content.toLowerCase()
+													.contains("chán đời")
+											|| message.content
+													.toLowerCase()
+													.contains("số phận hẩm hiu")
+											|| message.content.toLowerCase()
+													.contains("vô duyên quá")
+											|| message.content.toLowerCase()
+													.contains("chán quá")) {
+										gestureStr = "Disappointed";
+									} else if (message.content.toLowerCase()
+											.contains("chúc một ngày tốt đẹp")
+											|| message.content.toLowerCase()
+													.contains("tuyệt vời")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"bố tôi là những thiên tài")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"có sức khỏe là có tất cả")
+											|| message.content.toLowerCase()
+													.contains("vui tính")
+											|| message.content.toLowerCase()
+													.contains("dễ mến")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"những thứ tôi thích ăn")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"tôi thích ăn nhiều thứ")
+											|| message.content.toLowerCase()
+													.contains("vui nhất")
+											|| message.content.toLowerCase()
+													.contains(
+															"ngày đấy may mắn")) {
+										gestureStr = "Happy";
+									} else if (message.content.toLowerCase()
+											.contains("tôi không có mẹ")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"không muốn nói chuyện với tôi")
+											|| message.content.toLowerCase()
+													.contains("yêu đơn phương")
+											|| message.content.toLowerCase()
+													.contains("buồn quá")) {
+										gestureStr = "Sad";
+									} else if (message.content.toLowerCase()
+											.contains("chỉ tại bọn mình")
+											|| message.content.toLowerCase()
+													.contains("có đi đâu đâu")
+											|| message.content.toLowerCase()
+													.contains("nhóm gồm có")
+											|| message.content
+													.toLowerCase()
+													.contains(
+															"tôi được như thế này là nhờ họ")
+											|| message.content.toLowerCase()
+													.contains("vì")) {
+										gestureStr = "Explain";
+									} else if (message.content.toLowerCase()
+											.contains("chắc là")) {
+										gestureStr = "Maybe";
 									} else {
 										Random r = new Random();
-										gestureStr = gestureList[r
-												.nextInt(gestureList.length)];
+										int temp = r
+												.nextInt(gestureList.length);
+										gestureStr = gestureList[temp];
 									}
 
 									RobotGesture.runGesture(getRobot(),
