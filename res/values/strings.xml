@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BK-TBG Chatbot</string>
+    <string name="pull_to_refresh_pull_label">Kéo xuống để xem tin nhắn cũ</string>
+    <string name="pull_to_refresh_release_label">Thả để tải tin nhẵn cũ</string>
+    <string name="pull_to_refresh_refreshing_label">Đang tải...</string>
+    <string name="pull_to_refresh_tap_label">Ấn vào đây để xem tin nhắn cũ...</string>
+</resources>

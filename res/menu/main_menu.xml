@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/clear"
+        android:title="Xóa màn hình" />
+    <item android:id="@+id/clearHistory"
+        android:title="Xóa lịch sử" />
+    <item android:id="@+id/about"
+        android:title="Về chúng tôi"
+    />
+</menu>
